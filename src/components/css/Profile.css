@@ -1,0 +1,479 @@
+/* =====================
+   Profile.css
+   ===================== */
+
+.profile-page {
+  /* wrapper */
+}
+
+.profile-loading {
+  padding: 48px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 13px;
+}
+
+/* ── Header ── */
+.profile-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.page-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.page-sub {
+  font-size: 13px;
+  color: var(--text2);
+}
+
+/* ── Grid ── */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* ── Card ── */
+.profile-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+/* ── Left card — avatar ── */
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+.avatar-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.avatar-username {
+  font-size: 12px;
+  color: var(--text2);
+}
+
+/* ── Divider ── */
+.profile-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+/* ── Stats row ── */
+.profile-stats {
+  display: flex;
+  gap: 0;
+}
+
+.profile-stat {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-stat + .profile-stat {
+  border-left: 1px solid var(--border);
+}
+
+.profile-stat-val {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.profile-stat-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text2);
+  margin-top: 2px;
+}
+
+/* ── Password button ── */
+.password-btn {
+  width: 100%;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text);
+  font-family: inherit;
+  transition: background 0.15s;
+  text-align: left;
+}
+
+.password-btn:hover {
+  background: var(--bg);
+}
+
+/* ── Right card — fields ── */
+.section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text2);
+  margin-bottom: 16px;
+}
+
+.fields-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Editable field ── */
+.editable-field {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.editable-field:last-child {
+  border-bottom: none;
+}
+
+.editable-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text2);
+  margin-bottom: 4px;
+}
+
+.editable-value-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 6px;
+  margin: -4px -6px;
+  transition: background 0.1s;
+}
+
+.editable-value-row:hover {
+  background: var(--bg2);
+}
+
+.editable-value-row:hover .editable-edit-icon {
+  opacity: 1;
+}
+
+.editable-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.editable-empty {
+  color: var(--text2);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.editable-edit-icon {
+  font-size: 12px;
+  color: var(--text2);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.editable-input-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.editable-input {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.editable-btn {
+  border: none;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s;
+  flex-shrink: 0;
+}
+
+.editable-btn.save {
+  background: var(--accent);
+  color: white;
+}
+
+.editable-btn.save:hover {
+  background: var(--accent-dark);
+}
+.editable-btn.save:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.editable-btn.cancel {
+  background: var(--bg2);
+  color: var(--text2);
+}
+
+.editable-btn.cancel:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ── Account info ── */
+.account-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.account-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.account-row:last-child {
+  border-bottom: none;
+}
+
+.account-label {
+  font-size: 13px;
+  color: var(--text2);
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--accent);
+  font-family: inherit;
+  font-weight: 500;
+  padding: 0;
+}
+
+.link-btn:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+/* ── Badges ── */
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.badge-green {
+  background: var(--green-light);
+  color: var(--green);
+}
+.badge-blue {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+.badge-red {
+  background: #fee2e2;
+  color: #dc2626;
+}
+.badge-neutral {
+  background: var(--bg2);
+  color: var(--text2);
+}
+
+/* ── Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: var(--surface);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0;
+}
+
+.modal-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text2);
+  padding: 4px;
+}
+
+.modal-close:hover {
+  color: var(--text);
+}
+
+.modal-body {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 0 20px 20px;
+}
+
+/* ── Forms ── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text2);
+}
+
+.form-input {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--bg);
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+
+.form-error {
+  font-size: 12px;
+  color: #dc2626;
+  padding: 6px 10px;
+  background: #fee2e2;
+  border-radius: var(--radius-sm);
+}
+
+.form-success {
+  font-size: 12px;
+  color: var(--green);
+  padding: 6px 10px;
+  background: var(--green-light);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+/* ── Role Selector ── */
+.role-selector {
+  display: flex;
+  gap: 6px;
+}
+
+.role-btn {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  background: var(--bg2);
+  color: var(--text2);
+  transition: all 0.15s;
+}
+
+.role-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.role-btn.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  cursor: default;
+}
